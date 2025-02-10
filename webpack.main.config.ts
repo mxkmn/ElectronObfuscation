@@ -18,6 +18,7 @@ export const mainConfig: Configuration = {
 		new WebpackObfuscator({
 			optionsPreset: "high-obfuscation",
 			sourceMap: true,
+			disableConsoleOutput: false,
 		})
 	],
   resolve: {

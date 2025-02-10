@@ -1,3 +1,4 @@
+import { User, xdd } from "./user";
 /**
  * This file will automatically be loaded by webpack and run in the "renderer" context.
  * To learn more about the differences between the "main" and the "renderer" context in
@@ -29,3 +30,10 @@
 import './index.css';
 
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
+
+
+console.log(`name: ${xdd.namee} age: ${xdd.mxkmn}`);
+xdd.setName("teeeeeeest");
+console.log(`name: ${xdd.namee} age: ${xdd.mxkmn}`);
+var sdfkk = new User();
+console.log(`name: ${sdfkk.namee} age: ${sdfkk.mxkmn}`);
