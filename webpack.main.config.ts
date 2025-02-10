@@ -2,6 +2,7 @@ import type { Configuration } from 'webpack';
 
 import { rules } from './webpack.rules';
 import { plugins } from './webpack.plugins';
+import WebpackObfuscator from 'webpack-obfuscator';
 
 export const mainConfig: Configuration = {
   /**
@@ -13,7 +14,12 @@ export const mainConfig: Configuration = {
   module: {
     rules,
   },
-  plugins,
+  plugins: [
+		new WebpackObfuscator({
+			optionsPreset: "high-obfuscation",
+			sourceMap: true,
+		})
+	],
   resolve: {
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
   },

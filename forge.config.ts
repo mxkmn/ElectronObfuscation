@@ -14,6 +14,16 @@ import { rendererConfig } from './webpack.renderer.config';
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
+		ignore: [
+			"/node_modules/",
+			"/src/",
+			".js.map$", // all mappings
+			".ts$", // all .ts files
+			".gitignore$",
+			".eslintrc.json$",
+			"tsconfig.json$",
+			// "package.json$", // commented it out because it's available in ASAR by default
+		],
   },
   rebuildConfig: {},
   makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
